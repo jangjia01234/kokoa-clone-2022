@@ -1,0 +1,359 @@
+<!--드디어 알았다 아래 말은 그냥 이유 없이 무조건
+해야 한다는 것을.. 도대체 왜 해야하나 했는데
+걍 무조건 닥치고 해야 하는 거였다 ㅋㅋ
+이 코드는 이건 text가 아니라 html 이라고 말하는거래
+
+head 에서는 외부에서 보이지 않는 웹사이트의 환경설정을,
+body 에서는 사용자가 볼 수 있는 content를 보여준다.
+
+head의 태그는 웹페이지 내용으로 보여지지 않는다.
+
+글자가 꺠지거난 하는 현상을 방지하기 위해
+meta charset="utf-8" 을 꼭 넣어준다.
+
+lang = language = korean설명해준는 것
+
+link shortcuticon 은 사이트 ㅣ름 옆에 작은 아이콘 넣어줌
+-->
+<!--
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <link 
+            rel="shortcut icon" 
+            sizes="16x16 32x32 64x64"
+            href="https://nomadcoders.co/m.png"
+        />
+        <title> 지아의 웹사이트 </title>
+        <meta charset="utf-8" />
+        <meta name="description" content="이건 내 웹사이트인디" />
+    </head>
+    <body>
+        <h1> 
+            안녕하세여
+        </h1>
+        <a href="http://www.google.com" target="_blank">구글 링크임다</a>
+        <img src="img folder/피드백_감정상태.png"/>
+    </body>
+</html>
+
+VSC 간편 단축키
+
+7) 반복되는 단어 한방에 수정
+⌘ + D or Ctrl + D(한번씩 일일이 눌러줘야함 / 귀찮으면 Ctrl + F2)
+
+
+6) 클릭하는 곳마다 커서 생성
+⌥ + Click or Alt + Click
+
+
+5) 코드 위/아래로 움직이기
+⌥ + ↑ / ↓ or Alt + ↑ / ↓
+
+
+4) 코드 복사해서 위/아래로 움직이기
+⌥ + ⇧ + ↑ / ↓ or Alt + ⇧ + ↑ / ↓
+
+
+3) 코드 블록 한방에 코멘트 처리하기
+⌘ + / or Ctrl + /
+
+
+2) 선택된 영역에 커서 만들기
+⌥ + ⇧ + i or Alt + ⇧ + i
+
+
+1) 마우스가 가는 곳 마다 커서 만들기
+⌥ + ⇧ + Mouse Drag or Alt + ⇧ + Mouse Drag
+
+
+Bonus:
+파일 맨 위-아래로 한번에 이동하기
+Top / Bottom of File: ⌘ + ↑ / ↓ or Ctrl + Home / End
+
+
+사이드바 숨기기
+Hide / Show Sidebar: ⌘ + B or Ctrl + B
+
+
+
+
+-->
+
+
+<!-- form 연습 
+1. input 박스 만들기  (mdn에서 찾아보기)
+2. input의 속성: type="color" 색깔 지정 /  password
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>두 번째 테스트 사이트</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="input" value="Type here"/>
+        </form>
+    </body>
+</html>
+
+
+-->
+
+<!-- form 활용해서 개인정보 수집 페이지 만들기
+많이들 활용되는 버전 mdn 참고
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>두 번째 테스트 사이트</title>
+    </head>
+    <body>
+        <form action="getform.php" method="get">
+            <label>이름: <input type="text" name="first_name" /> </label>
+            <br />
+            <label>성: <input type="text" name="last_name"</label>
+            <br />
+            <label>이메일: <input type="email" name="user_email"</label>
+            <br />
+            <input type="submit" value="완료" />
+        </form>
+    </body>
+</html>
+
+
+-------
+니코샘 강의에 의함
+input type="text" 에서 text는 디폴트 타입
+placeholder attribute 를 사용하면 미리 글자가 보이게
+할 수 있다
+
+-->
+
+<!-- 아래는 스스로 개인정보 수집 동의를 포함한
+sign in 페이지를 만들어 본 것인데,
+동의할 시에 예/아니오 중 하나만 선택하게 하려고 했다
+그런데 name="" 에서 ""부분에 들어갈 단어를 둘이 통일시키지
+않으면 택1이 되지 않더라.
+value는 왜 사용되는지, name은 왜 사용되는지를 잘 몰라서
+더 헤매인 것 같다. 설명 제대로 들으러 가야지. 재밌당 ㅋㅋ
+
+
++근데 블로그 글을 보니 둘 중 하나를 선택하게 하려면
+윗줄에 name="check"까지는 통일하고 checked="checked"를
+추가하라고 알려준다..
+
+아아아아 ㅋㅋㅋ 이거는 기본적으로 하나가 체크되어 있도록
+설정하는 거였다 짱신기
+
+***니코쌤 한줄정리!
+기본 문법은 아래와 같다
+
+<tagname (required) attrname="attrvalue">아무말이나</tagnme>
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>두 번째 테스트 사이트</title>
+    </head>
+    <body>
+        <h3> Sign in </h3>
+        <form>
+            <input type="file" accept=".jpeg" /><br/>
+            <input required placeholder="Name" type="text" /> <br />
+            <input required placeholder="Last Name" type="text" /> <br />
+            <input required placeholder="Username" minlength="10" type="text" /> <br />
+            <input required placeholder="Password" type="password" /> <br /> 
+            개인정보 수집에 동의하십니까? 
+            <input required type="radio" name="check" value="예"/> 예
+            <input required type="radio" name="check" value="아니오" />아니오 
+            <br/><input type="submit" value="회원가입" />
+        </form>
+    </body>
+</html>
+
+
+
+lable은 input과 함께여야 작동이  된다
+lable에는 for, input에는 id라는 속성을 넣어주는데
+이때 for과 id 뒤에 들어가는 사항은 동일해야 한다!
+
+두 군데에 동시에 입력하고 싶으면
+alt 누른 상태에서 동시에 입력할 장소 클릭하면 
+더블클릭 상태가 됨.
+
+이번 강의에서 가장 중요한 것은 속성인 id 이다
+id는 body 안에 있는 어떤 태그에도 넣을 수 있는 속성이다
+body 안의 아무 태그에나 id를 다 넣을 수 있는 이유는
+id는 unique identifier(고유식별자)이기 떄문임
+태그 하나 당 하나의 id 만 가질 수 있다는 규칙이 있다
+전체 html에서 각 id의 값은 하나로 고유해야 한다.
+id는 향후에 css와의 연결고리가 된다.
+
+
+
+#2.10 Semantic HTML
+
+문서를 보기만 해도 그 의미를 짐작할 수 있는 것을
+semantic 이라고 한다.
+
+div는 아무 의미도 없는 하나의 박스를 만들어 준다
+div 로 태그를 열고 닫았을 때 줄바꿈이 되는 이유는
+박스끼리는 서로 나란히 있을 수 없기 때문이다.
+
+div를 대체할 수 있는 태그 ex. header, main, footer
+
+<body>
+    <header>
+        <h1>Korea Times</h1>
+    </header>
+    <main>
+        <p>hello!</p>
+    </main>
+    <footer>
+        &copy; 2022 J.J
+    </footer>
+</body>
+
+header는 이 때 div와 같은 기능을 가지고 있지만,
+그 자체로 읽기만 해도 아 헤더구나! 하는 의미를 짐작 가능
+
+div = header = div id="header"
+예전에는 div id를 자주 썼지만 헤더가 등장한 이상
+헤더만으로 대체 가능하기 때문에 div 지양하는 추세
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>두 번째 테스트 사이트</title>
+    </head>
+    <body>
+        <h3>회원가입</h3>
+        <form>
+            <div>
+                <label for="first-name">이름</label>
+                <input id="first-name" required placeholder="이름" type="text" />
+            </div>
+
+            <div>
+                <label for="nickname">닉네임</label>
+                <input id="nickname" required placeholder="닉네임" type="text"/>
+            </div>
+            
+            <div>
+                <label for="email">이메일</label>
+                <input id="email" required placeholder="이메일" type="email"/>
+            </div>
+
+            <div>
+                <label for="password">비밀번호</label>
+                <input id="password" required placeholder="비밀번호" type="password"/>
+            </div>
+
+            <div>
+                <label for="birth">생년월일</label>
+                <input id="birth" required placeholder="생년월일" type="date"/>
+            </div>
+
+            <div>
+                <label for="website">웹사이트 주소</label>
+                <input id="website" required type="url" />
+            </div>
+
+            <div>
+                <label for="profile">프로필 사진</label>
+                <input id="profile" type="file" accept=".png" />
+            </div>
+
+            마케팅 정보 제공에 동의하십니까?
+            <div>
+                <input required type="radio" name="check" value="예" /> 예
+                <input required type="radio" name="check" value="아니오" /> 아니오
+            </div>
+
+            <div>
+                <input type="submit" value="완료"/>
+            </div>
+        </form>
+    </body>
+</html>
+
+
+span 은 짧은 텍스트를 위한 태그
+p 는 문단(paragraph)을 위한 태그
+
+시맨틱 태그를 서로 바꿔 적어도 되기는 하지만
+단어 자체로 의미 파악이 바로 돼야 효율적임
+
+ex. 짧은 글인데 p를 쓴다거나, 주소인데 span 을 쓴다거나.. 
+해도 문제는 없지만
+내가 작성한 코드를 누군가 읽을 때(컴퓨터가 될 수도 있고
+나 혹은 팀원들이 될 수도 있음),
+태그 자체만으로 아 이건 짧은 글이구나 or 주소이구나 하는걸
+바로 알 수 있어야 효율적이기 때문에 사용하는 것.
+
+
++ h1~h6가 뭉텅이로 있으면 hgroup을 써주면 된다. 첨 알았음!
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>J.J Times</title>
+    </head>
+    <body>
+        <header>
+            <h1>Jia Jang Times</h1>
+        </header>
+        <main>
+            <span>hello!</span>
+        </main>
+        <footer>
+            &copy; 2022 J.J
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+HTML 총정리 (Recap)
+
+1) html 의 문법은
+<tagname attrName="value(이름)">아무내용</tagname>
+
+2) 항상 큰따옴표를 쓰자  
+오타가 많은 경우 prettier 확장 프로그램 추천 (자동 수정)
+
+3) 시맨틱 태그
+semantic tag는 코드 자체에 의미가 부여된 것이다
+(ex. header, navigation, footer, ...)
+좋은 프로그래머가 되기 위해서는 semantic tag를 써야 함
+
+4) 태그와 속성(attribute)
+어떤 속성은 모든 태그에서 사용 가능하고(ex. id)
+어떤 속성은 특정 태그에만 사용 가능하다(ex. src -> img)
+
++태그를 외울 필요 전혀 없고,필요할 때 구글링만 하면 된다.
+자주 사용하는 태그만 외워두면 편하다.
+(니코쌤은 header, main, footer, navigation, sidebar/aside)
+
+
+
+5.0 git/github
+
+
+
+    git은 파일을 계속 추적하는 것임
+    버전을 관리하면서 협업 등을 용이하게 하고 날아감 방지
+
+    <git/github 차이점>
+    git은 파일의 변경내역을 계속 추적하는 version control sys
+    github은 파일 내역과 파일들을 올려주는 공간
+
+
+
+-->
