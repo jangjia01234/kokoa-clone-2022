@@ -497,6 +497,8 @@ semantic tag는 코드 자체에 의미가 부여된 것이다
 </html>
 
 
+
+
 #3.0
 
 CSS를 적용하는 법
@@ -508,24 +510,107 @@ CSS를 적용하는 법
     - style 태그는 반드시 'head' 안에 들어가 있어야 한다. (header와 혼동 x)
 
 2번을 해보자!
+<head>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
     - css 파일을 따로 만들고, link 태그를 이용해서 이 파일을 연결한다
     - link href="css파일명" rel(relationship관계를 뜻함)="stylesheet(저 css
     파일이 stylesheet 이라는 뜻)"
 
--->
+
+css가 하는 일은 html 태그를 가리키는 일임 (ex. 이 태그는 초록색이야)
+이때 이 가리키는 것 자체를 'selector'이라고 부른다
+selector 작성 { (대괄호) 작성 후 그 안에 내용 적기
+
+blueTitle {
+    we write whatever we want
+}
+
+css에서 태그 쓸 때는 띄어쓰기 하지 말 것
+ex. font-size
+
+
+CSS 쓰는 법 정리
+1. 태그를 지정하고 (ex.h1)
+2. 원하는 속성값을 쓰면 됨 (color:~ font-style:~)
+    
+CSS = Cascading Style Sheets
+cascading은 위에서 아래로 내려오는? 그런뜻
+
+
+#MEMO
+background-color: rgb(0, 0, 176);
+
+
+텍스트 타이핑 애니메이션
+
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>learning css</title>
-        <link href="styles.css" rel)="stylesheet" />
+        <title>J.J Portfolio</title>
+        <style>
+            body {
+                background-image: url(https://images.pexels.com/photos/2693212/pexels-photo-2693212.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+                background-size: auto;
+            }
+            h1 {
+                font-size: 20px;
+                min-width: 11px;
+                white-space: nowrap;
+                margin: 0;
+                position: fixed;
+                color: transparent;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%. -50%);
+            }
+            h1::before {
+                content: "Typing Effect with CSS";
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                color: black;
+                overflow: hidden;
+                border-right: 1px solid black;
+                animation: typing 5s steps(31) infinite;
+            }
+
+            @keyframes typing {
+                0% {
+                    width: 0%;
+                }
+                50% {
+                    width: 100%;
+                }
+                100% {
+                    width: 0%;
+                }
+            }
+
+            address {
+                text-align: center;
+                color: rgb(202, 195, 241);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 800;
+            }
+            footer {
+                text-align: center;
+                color:rgb(202, 195, 241);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 800;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <h1>Let's learn CSS</h1>
+            <h1>Portfolio</h1>
+            <h1>Jia Jang</h1>
         </header>
         <main>
-            <address>123 Road Gonghang</address>
+            <address>100, 39-Gil, Gonghang-Daero</address>
         </main>
         <footer>
             &copy; 2022 J.J
@@ -535,6 +620,53 @@ CSS를 적용하는 법
 
 
 
+Onion Skinning Text Morphing
+https://codepen.io/jhealey5/pen/xrErrW
 
+-->
 
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>J.J Portfolio</title>
+        <style>
+            body {
+                background-image: url(https://images.pexels.com/photos/2693212/pexels-photo-2693212.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+                background-size: auto;
+            }
+            h1 {
+                color:rgb(202, 195, 241);
+                font-family: fantasy;
+                font-style: italic;
+                font-size: 150px;
+                font-weight: 900;
+                line-height: 0.5;
+                text-align: center;
+            }
+            address {
+                text-align: center;
+                color: rgb(202, 195, 241);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 800;
+            }
+            footer {
+                text-align: center;
+                color:rgb(202, 195, 241);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 800;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Portfolio</h1>
+            <h1>Jia Jang</h1>
+        </header>
+        <main>
+            <address>100, 39-Gil, Gonghang-Daero</address>
+        </main>
+        <footer>
+            &copy; 2022 J.J
+        </footer>
+    </body>
+</html>
