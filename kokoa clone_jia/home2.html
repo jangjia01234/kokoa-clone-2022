@@ -762,7 +762,7 @@ style에서 id를 가리키기 위해서는 #id 적어주기!
 ex. body 내에 div id="first"라면 head style 내에 #first {}
 이때 css에서의 id와 html에서의 id명을 반드시 같게 적도록 주의한다
 
--->
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -815,3 +815,67 @@ ex. body 내에 div id="first"라면 head style 내에 #first {}
 
 
 
+
+Border 에 대해 알아보자
+Border 는 말 그대로 box의 경계이다
+
+스타일은 border style mdn 검색
+border: width style color; 순으로 작성함
+ex. <style> * { border: 2px dotted pink; }
+
+style 뒤에 
+* {}  이건 전체에 적용된다는 표시! 여기에 적은 내용이
+전체 파트에 반영된다.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia block practice</title>
+        <style>
+            * {
+                border: 2px dotted pink ;
+            }
+            html {
+                background-color: tomato;
+            }
+            body {
+                background-color: yellow;
+                margin: 20px;
+                padding: 20px;
+            }
+            div {
+                padding: 20px;
+            }
+            #first {
+                background-color: black;
+                width: 150px;
+                height: 150px;
+            }
+            #second {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+            }
+            #third {
+                background-color: green;
+                width: 50px;
+                height: 50px;
+            }
+            span {
+                border-style: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    <span>hellooo</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
