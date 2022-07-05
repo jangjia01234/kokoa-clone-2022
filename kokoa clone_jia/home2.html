@@ -623,7 +623,6 @@ background-color: rgb(0, 0, 176);
 Onion Skinning Text Morphing
 https://codepen.io/jhealey5/pen/xrErrW
 
--->
 
 <!DOCTYPE html>
 <html>
@@ -670,3 +669,149 @@ https://codepen.io/jhealey5/pen/xrErrW
         </footer>
     </body>
 </html>
+
+
+
+3.3
+스타일 태그에 div 특성을 적고
+밑에 바디에 div가 세 개 있으면
+style css 파트는 세 개의 div에 모두 적용된다. (div를 가리킴
+-> 모든 div에 해당 때문)
+
+
+박스들은 서로 옆으로 배치되지 않는다.
+div
+div
+div 하면 세로로 세 개의 박스가 생김 (나란히x)
+a (링크) 태그나 span은옆에 생길 수 있음
+p는 div 처럼 옆에 아무것도 올 수 없음
+
+
+정리: 요소별로 옆에 배치 가능/불가능 나뉜다
+    1) 가능 
+        ex.  a, span, img (세 개 기억하기) -> inline 이라고 부름 (보통 아주 작은 글이나 이미지가 해당됨)
+    2) 불가능 
+        ex. div, p, address, header -> block 이라고 부름 (box 대신 이렇게 부르기)
+
+    => block 이 아닌 종류(1번)를 기억하는게 편하다. a/span/img 기억!
+
+1번을 2번으로 바꾸기
+css 태그에서 display: inline / block 지정
+
+***inline 요소는 height 와 width 를 가질 수 없다! block만 있음
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia box practice</title>
+        <style>
+            div {
+                display: inline;
+                height: 150px;
+                width: 150px;
+                background-color: tomato;
+            }
+            span {
+                display: block;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>aaaa</div>
+        <span>안녕</span>
+        <span>안녕</span>
+        <a href="any.com">anything</a>
+    </body>
+</html>
+
+
+
+
+
+
+
+block의 세 가지 특징 ( 매우매우 중요!)
+    1) margin
+        - box의 경계(border) 바깥에 있는 공간 
+    2) border
+
+    3) padding
+
+값을 하나만 적으면 사방에 다 적용, 두 개 적으면 수직/수평 적용
+margin: 20px 10px; 라고 하면
+먼저 나오는 20px는 위,아래   /   10px는 양옆   을 말함
+margin: 20px 10px 5px 15px; 일 때 이렇게
+네 개 다 적으면 시계방향대로 적용됨 (위 오른쪽 아래 왼쪽)
+-> padding 도 마찬가지
+
+Collapsing margins 현상
+block의 경계가 body의 경계와 같다면
+두 margin은 하나로 취급됨
+이 현상은 위, 아래쪽에서만 일어남 (좌우는 해당x)
+이때 위쪽의 여백을 없애기 위해서 padding의 개념이 필요하다
+
+-> collapsing margins 현상은 막 기억할 필요는 없고 (깊이 파지 말것)
+가끔 이상한 현상을 발견하면 "아.. 경계가 닿아서 margin이 같아졌구나"
+이 정도만 생각하면 됨
+
+margin은 box의 경계 바깥쪽을 말한다면,
+padding은 box의 경계 안쪽의 공간을 의미함
+
+style에서 id를 가리키기 위해서는 #id 적어주기!
+ex. body 내에 div id="first"라면 head style 내에 #first {}
+이때 css에서의 id와 html에서의 id명을 반드시 같게 적도록 주의한다
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia block practice</title>
+        <style>
+            html {
+                background-color: tomato;
+            }
+            body {
+                background-color: yellow;
+                margin: 20px;
+                padding: 20px;
+            }
+            div {
+                padding: 10px;
+            }
+            #first {
+                background-color: black;
+                width: 150px;
+                height: 150px;
+            }
+            #second {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+            }
+            #third {
+                background-color: green;
+                width: 50px;
+                height: 50px;
+            }
+            #fourth {
+                background-color: red;
+                width: 25px;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    <div id="fourth"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
