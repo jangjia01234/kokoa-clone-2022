@@ -827,7 +827,6 @@ style 뒤에
 * {}  이건 전체에 적용된다는 표시! 여기에 적은 내용이
 전체 파트에 반영된다.
 
--->
 
 
 <!DOCTYPE html>
@@ -877,5 +876,232 @@ style 뒤에
                 </div>
             </div>
         </div>
+    </body>
+</html>
+
+
+
+
+
+inline은 높이와 너비가 없다
+그래서 위, 아래에 margin을 가질 수 없다 (양옆만 적용됨)
+padding은 사방에 다 가질 수 있는데, margin은 좌우만 된다.
+
+
+class는 여러 개가 반복될 때ㅐ 중복되는 작성을 피하고자 사용함
+id는 고유의 값을 가져야 하므로 id를 사용하는 것보다 class 사btn 용
+id 처럼 <tag id="value">content</tag> 으로 작성한 다음에
+앞 css 파트에 #이 아니라 .value(이름) 로 작성해주기!
+class는 id와 달리 한 번에 여러 개를 적어줄 수 있다.
+ex. id="tomato"
+class =btn "tomato apple honey hello"
+
+#apple -> id="apple" 이라는 뜻
+.apple -> class="btn apple" 이라는 뜻
+
+
+반복되는 부분을 만들지 않도록 주의하자!!! 비효율적이야.
+
+.btn = button
+
+한 번에 수정하려면 ctrl+D
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia css practice</title>
+        <style>
+           body {
+            margin: 20px;
+           }
+           span {
+            background-color: pink;
+            padding: 20px;
+            margin: 20px;
+           }
+           .btn {
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            }
+            .apple {
+            background-color: yellowgreen;
+           }
+           .wavy {
+            background-color: aqua;
+           }
+        </style>
+    </head>
+    <body>
+        <span class="btn wavy">hej jag ar jia</span>
+        <span class="btn apple">hej jag ar jia</span>
+        <span class="btn wavy">hej jag ar jia</span>
+        <span class="btn apple">hej jag ar jia</span>
+        <span class="btn wavy">hej jag ar jia</span>
+        <span class="btn apple">hej jag ar jia</span>
+    </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia css practice</title>
+        <style>
+           body {
+            margin: 20px;
+           }
+           div {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+           }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
+
+
+
+#3.9
+Inline block - display
+
+display: inline-block 은 대상을 block으로 인식하게 한다
+-> height, margin(모든 방향) 을 가질 수 있도록 한다
+그러나 inline block은 반응형 디자인을 지원하지 않고, 모니터나 창 크기에
+영향을 받는다. 그래서 이렇게 잘 쓰지 않는다. 그냥 이런게 있다는걸 알아만 두기.
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia css practice</title>
+        <style>
+           body {
+            margin: 20px;
+           }
+           div {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            margin-right: 10px;
+           }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
+
+
+
+
+
+#3.10 대망의 flexbox!
+
+flexbox는 박스들을 어떤 곳이든 둘 수 있다
+
+사용법이 아주 쉽지만 꼭 지켜야 할 3개의 규칙이 있다
+    1) 자식 엘리먼트에는 아무 것도 적지 말 것. 부모 엘리먼트에만 명시해야 함.
+        ex. body에 있는 3개의 div를 움직이고 싶다면, div가 아니라 body에 표시해야 함
+            <style> body { display: flex; justify content:center; } </style>
+    2) 주축 (main axis) -> 수평 라인
+        justify-content 는 주축에 적용됨 (가로)
+    3) 교차축 (cross axis) -> 수직 라인
+        align-items 는 교차축에 적용됨 (세로)
+
+
+display flex 를 하고 나면 justify content를 사용할 수 있게 됨! 초간편
+
+vh = viewpoint(=screen) height 
+100 screen height 는 화면 높이의 100%를 말함
+
+align items 에서 stretch는 height 값이 고정되어있으면 반영 안됨
+
+
+*총정리
+1. 더 쉽게 사용하기 위해 flexbox를 적용하고 싶다면, 자식이 아니라 부모에게만 알려주면 된다
+예제에서는 body가 부모 엘리먼트, div가 자식 엘리먼트였다
+2. justify-content와 align-items를 적용하고 싶다면 먼저 display:flex를 해줘야 한다
+display:flex를 하면 해당 엘리먼트인 body가 flex 컨테이너가 된다
+3. flex 컨테이너는 두 개의 축을 가지고 있다. '기본적으로' 주축은 수평, 교차축은 수직이다.(변경 가능)
+justify-content는 주축에, align-items는 교차축에 적용된다.
+
++ body가 height 값을 가지고 있지 않다면,
+이미 맨 위아래를 차지하고 중심에 있기 때문에 
+align-items를 설정하더라도 바뀌지 않는다.
+예제에서는 vh(viewpoint height)를 사용함 - 화면 크기에 따라 바뀌게 하기 위함
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia css practice</title>
+        <style>
+           body {
+            height: 100vh;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+           }
+           div {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+           }
+           #second {
+            background-color: grey;
+           }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div id="second"></div>
+        <div></div>
+    </body>
+</html>
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Jia css practice</title>
+        <style>
+           body {
+            height: 100vh;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+           }
+           div {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+           }
+           #second {
+            background-color: grey;
+           }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div id="second"></div>
+        <div></div>
     </body>
 </html>
