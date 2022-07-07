@@ -1233,6 +1233,14 @@ align-items를 설정하더라도 바뀌지 않는다.
     </body>
 </html>
 
+
+top, left, right, bottom 이라는 프로퍼티 중
+하나만 수정해도 아래 위에 div 보다 위쪽으로 감 
+이때부터 block 이나 margin을 신경쓰지 않음
+
+전에는 서로 같은 레이어에 있어서 서롤 접촉하고 있었다면
+이후부터는 두 div가 서로 다른 레이어에 있게 됨
+
 -->
 
 <!DOCTYPE html>
@@ -1241,7 +1249,7 @@ align-items를 설정하더라도 바뀌지 않는다.
         <title>Sign Up</title>
         <style>
             body {
-                height: 100vh;
+                height: 1000vh;
                 margin: 20px;
             }
             div {
@@ -1250,11 +1258,16 @@ align-items를 설정하더라도 바뀌지 않는다.
                 color: white;
                 background-color: salmon;
             }
+            #different {
+                background-color: olive;
+                width: 400px;
+                position: fixed;
+                top: 5px;
+            }
         </style>
     </head>
     <body>
-        <div>
-
-        </div>
+        <div></div>
+        <div id="different"></div>
     </body>
 </html>
