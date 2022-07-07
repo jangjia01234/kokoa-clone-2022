@@ -1239,9 +1239,9 @@ top, left, right, bottom 이라는 프로퍼티 중
 이때부터 block 이나 margin을 신경쓰지 않음
 
 전에는 서로 같은 레이어에 있어서 서롤 접촉하고 있었다면
-이후부터는 두 div가 서로 다른 레이어에 있게 됨
+이후부터는 두 div가 서로 다른 '레이어'에 있게 됨
 
--->
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -1258,16 +1258,137 @@ top, left, right, bottom 이라는 프로퍼티 중
                 color: white;
                 background-color: salmon;
             }
-            #different {
-                background-color: olive;
-                width: 400px;
+            #green {
+                background-color: green;
                 position: fixed;
-                top: 5px;
+                opacity: 0.2;
+            }
+            #different {
+                background-color: red;
+                opacity: 0.3;
             }
         </style>
     </head>
     <body>
-        <div></div>
+        <div id="green"></div>
         <div id="different"></div>
+    </body>
+</html>
+
+
+
+#3.13 Relative Absolute
+
+    position: static 
+        -> 레이아웃이 박스를 처음 위치하는 곳에 두는 것
+    position: relative 
+        ->를 쓰면 top, bottom, right, left를 쓸 수 있게 됨
+        아주 조금씩 옮기고 싶을 때 유용함. 
+        (엘리먼트가 처음 놓인 자리에서 상하좌우로 움직인다고 기억)
+    position: absolute
+        -> 여기선 body를 기준으로 상하좌우로 움직인다 (부모 box 기준 x)
+        가장 가까운 relative 부모를 기준으로 이동시켜줌
+        relative한 부모를 찾지 못한다면 body를 찾음
+        여기서는 div가 relative가 아니므로 body 기준 이동
+        예제에서 div {} 에 position:relative 추가하면 div box를 기준으로
+        움직이는 걸 볼 수 있음 (이때는 relative한 부모가 div가 된 것)
+
+    *총정리
+    position에는 1)static (디폴트) 2)relative 3)absolute 가 있다
+    그 중에서도 absolute 와 relative 가 중요하다
+    relative한 부모가 필요하다는 사실 꼭 기억할 것!
+    많은 사람들이 box는 relative한데 부모를 relative하게 만들지 않아서
+    오류를 내니 이 부분 주의해야 한다
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 50px;
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: salmon;
+            }
+            .green {
+                background-color: green;
+                height: 100px;
+                position: absolute;
+                right: 0;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="green"></div>
+        </div>
+    </body>
+</html>
+
+
+
+
+#3.14 Pseudo selectors 1
+
+Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것임
+
+            
+    특정 박스만 색 다르게 하기
+            div:first-child {
+                background-color: yellow;
+            }
+            div:last-child {
+                background-color: blue;
+            }
+
+    특정 글자만 색 다르게 하기
+            span {
+                background-color: violet;
+            }
+            span:nth-child(2),
+            span:nth-child(5) {
+                background-color: tomato;
+            }
+
+
+-->
+
+
+<html lang="ko">
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 50px;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: salmon;
+            }
+            span {
+                background-color: violet;
+            }
+            span:nth-child(2),
+            span:nth-child(5) {
+                background-color: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <span>hello</span>
+        <span>hello</span>
+        <span>hello</span>
+        <span>hello</span>
+        <span>hello</span>
+        <span>hello</span>
+        <span>hello</span>
     </body>
 </html>
