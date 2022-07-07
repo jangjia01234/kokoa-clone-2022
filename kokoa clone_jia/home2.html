@@ -1075,7 +1075,9 @@ align-items를 설정하더라도 바뀌지 않는다.
 </html>
 
 
--->
+
+#3.11 flexbox part 2
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -1105,3 +1107,88 @@ align-items를 설정하더라도 바뀌지 않는다.
         <div></div>
     </body>
 </html>
+
+
+
+1차 과제
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Sign Up</title>
+        <meta charset="utf-8"/>
+        <style>
+            * {font-family: Georgia, 'Times New Roman', Times, serif}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Create An Account</h3>
+        </header>
+
+        <main>
+            <form>
+                <div>First Name
+                    <label for="First Name"></label>
+                    <input id="First Name" required placeholder="First Name" 
+                    type="text" />
+                </div>
+                
+                <div>Last Name
+                    <label for="Last Name"></label>
+                    <input id="Last Name" required placeholder="Last Name"
+                    type="text" />
+                </div>
+
+                <div>Email
+                    <label for="Email"></label>
+                    <input id="Email" required placeholder="Email"
+                    type="email"/>
+                </div>
+
+                <div>Username
+                    <label for="Username"></label>
+                    <input id="Username" required placeholder="Username"
+                    type="text"/>
+                </div>
+
+                <div>Password
+                    <label for="Password"></label>
+                    <input id="Password" required placeholder="Password" minlength="10"
+                    type="password" />
+                </div>
+
+                <div>How happy are you?
+                    <label for="Happiness"></label>
+                    <input id="Happiness" required type="range" min="0" max="100" list="tickmarks"/>
+                        <datalist id="tickmarks">
+                            <option value="0"></option>
+                            <option value="10"></option>
+                            <option value="20"></option>
+                            <option value="30"></option>
+                            <option value="40"></option>
+                            <option value="50"></option>
+                            <option value="60"></option>
+                            <option value="70"></option>
+                            <option value="80"></option>
+                            <option value="90"></option>
+                            <option value="100"></option>
+                        </datalist>
+                </div>
+
+                <div>What is your fav. color?
+                    <label for="Color"></label>
+                    <input id="Color" required type="color"/>
+                </div>
+
+                <div>
+                    <label for="Submit"></label>
+                    <input id="Submit" required value="Create Account" type="submit"/>
+                </div>
+
+            </form>
+        </main>
+    </body>
+</html>
+
