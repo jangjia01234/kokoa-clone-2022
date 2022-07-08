@@ -1460,6 +1460,59 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
 </html>
 
 
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Coding Challenge</title>
+        <style>
+            body {
+                background-color:tomato;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box {
+                background-color:wheat;
+                border: 8px solid black;
+                width: 800px;
+                height: 800px;
+            }
+            .first, .second, .third{ 
+                background-color: teal;
+                border: 10px solid white;
+                height: 10vh;
+                margin: 30px;
+            }
+            .first {
+                border-style: solid;
+                width: 10vh;
+            }
+            .second {
+                border-style: dashed;
+                width: 40vh;
+            }
+            .third {
+                border-style: solid;
+                width: 10vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
+    </body>
+</html>
+
+
+
+과제 최종
 -->
 
 
@@ -1470,44 +1523,45 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
         <title>Coding Challenge</title>
         <style>
             body {
-                background-color: tomato;
+                background-color:tomato;
                 height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 2.5vh;
+            }
             .box {
-                background-color: bisque;
-                border: 4px solid black;
-                width: 400px;
-                height: 400px;
+                position: fixed;
+                background-color:wheat;
+                border: 2px solid black;
+                height: 50vh;
+                width: 50vh;
             }
-            .first, .second, .third{ 
+            .short_1, .short_2 { 
                 background-color: teal;
-                border: 5px solid white;
-                height: 8vh;
-                margin: 25px;
-                flex-basis: auto;
+                border: 2px solid white;
+                height: 50vh;
+                width: 11vh;
             }
-            .first {
-                border-style: solid;
-                width: 8vh;
-            }
-            .second {
-                border-style: dashed;
-                width: 30vh;
-            }
-            .third {
-                border-style: solid;
-                width: 8vh;
+            .long {
+                background-color: teal;
+                border: 2px dashed white;
+                height: 50vh;
+                width: 40vh;
             }
         </style>
     </head>
     <body>
         <div class="box">
-            <div class="first"></div>
-            <div class="second"></div>
-            <div class="third"></div>
+            <div class="short_1"></div>
+            <div class="long"></div>
+            <div class="short_2"></div>
         </div>
     </body>
 </html>
