@@ -1355,8 +1355,13 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
             span:nth-child(5) {
                 background-color: tomato;
             }
+    짝수/홀수 순서만 반복적으로 적용하는 예 (even/odd)
+            span:nth-child(even)
 
--->
+    다른 순서로 적용하고 싶다면? 식 활용 ㅋㅋ
+            span:nth-child(3n+1)
+
+
 
 <!DOCTYPE html>
 <html>
@@ -1375,8 +1380,7 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
             span {
                 background-color: violet;
             }
-            span:nth-child(2),
-            span:nth-child(5) {
+            span:nth-child(even) {
                 background-color: tomato;
             }
         </style>
@@ -1389,5 +1393,121 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
         <span>hello</span>
         <span>hello</span>
         <span>hello</span>
+    </body>
+</html>
+
+
+
+220708 coding challenge
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Coding Challenge</title>
+        <style>
+            body {
+                background-color: tomato;
+                padding: 100px;
+            }
+            .mother {
+                background-color: bisque;
+                border-style: solid;
+                border-color: black;
+                border-width: 4px;
+                margin: auto;
+                width: 200px;
+                height: 200px;
+            }
+            .first {
+                background-color: teal;
+                border-style: solid;
+                border-color: white;
+                border-width: 5px;
+                margin: auto;
+                width: 50px;
+                height: 50px;
+            }
+            .second {
+                background-color: teal;
+                border-color: white;
+                border-style: dashed;
+                border-width: 5px;
+                margin: auto;
+                width: 150px;
+                height: 50px;
+            }
+            .third {
+                background-color: teal;
+                border-style: solid;
+                border-color: white;
+                border-width: 5px;
+                margin: auto;
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mother">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
+    </body>
+</html>
+
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Coding Challenge</title>
+        <style>
+            body {
+                background-color: tomato;
+                padding: 100px;
+            }
+            .mother {
+                background-color: bisque;
+                border-style: solid;
+                border-color: black;
+                border-width: 4px;
+                margin: auto;
+                width: 400px;
+                height: 400px;
+            }
+            .first, .second, .third { 
+                background-color: teal;
+                border-color: white;
+                border-width: 5px;
+                margin: auto;
+                height: 100px;
+            }
+            .first {
+                border-style: solid;
+                width: 100px;
+            }
+            .second {
+                border-style: dashed;
+                width: 350px;
+            }
+            .third {
+                border-style: solid;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mother">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
     </body>
 </html>
