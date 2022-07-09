@@ -57,3 +57,50 @@ body {
   }
 
   */
+
+
+body {
+    background-color:snow;
+    font-family:'Times New Roman', Times, serif;
+}
+.box_first {
+    background: tomato;
+    height: 200px;
+    width: 100px;
+    border: 4px solid white;
+}
+.box_first_inside {
+    background-color: white;
+}
+
+.box_second {
+    background: teal;
+    height: 200px;
+    width: 100px;
+    border: 4px solid white;
+}
+.box_second_inside {
+    background-color: white;
+}
+
+.box_third {
+    background: burlywood;
+    height: 200px;
+    width: 100px;
+    border: 4px solid white;
+}
+.box_third_inside {
+    background-color: white;
+}
+
+.box_fourth {
+    background: thistle;
+    height: 200px;
+    width: 100px;
+    border: 4px solid white;
+}
+.box_fourth_inside {
+    background-color: white;
+}
+
+
