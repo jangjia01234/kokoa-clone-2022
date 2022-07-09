@@ -1513,7 +1513,7 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
 
 
 과제 최종
--->
+
 
 
 <!DOCTYPE html>
@@ -1566,10 +1566,145 @@ Pseudo Selectors 는 좀 더 세부적으로 엘리먼트를 선택해주는 것
     </body>
 </html>
 
-<!-- vh, vw 등 단위에 대해서 아직 감이 잘 안잡힌다.
+ vh, vw 등 단위에 대해서 아직 감이 잘 안잡힌다.
 실제로 여러 방식으로 활용해보면서 익히는 수밖에 없겠지..?
 
 회원가입 페이지는 이제 css 넣어서 만들어보면
 좋을 것 같다.
 
+
+7/8 코챌 니꼬쌤 솔루션
+css 파일을 따로 빼셨다. 
+stylesheet 를 쓰라는 말이 이거였구나... 앞으론 반드시 주의하기!
+
++내가 자꾸 meta name을 빼먹어서, 왜 써야 하는지 찾아봤다.
+<meta name="설명" content="생활코딩"> 
+이라는 메타태그를 포함시킬 경우, 
+브라우저가 이를 검색 결과의 콘텐츠 요약에 활용할 가능성이
+높아진다는 것이다. 
+초반에 배운 거라 잊어버렸는데 다시 상기하기!
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Jia Coding Challenge</title>
+        <link rel="stylesheet" href="styles.css"
+    </head>
+    <body>
+        <div class="father">
+            <div class="inside"></div>   
+                <div class="inside inside-second"></div>
+            <div class="inside"></div>
+        </div>
+    </body>
+</html>
+
+
+
+p 안에 있는 span 만 효과를 주고 싶을 때
+p span {}   -> p 안에서 span 찾으라는 명령어
+father children {} 순서    ex) div p span {} 도 가능
+
+두 span 중 앞에 있는 상위 span 에만 효과를 주고 싶을 때
+div 바로 밑 자식인 span에게 적용하라는 명령어
+div > span {}
+
+p 바로 다음에 오는 span 에만 효과를 주고 싶을 때
+p + span {}
+*** p랑 span 사이에 다른 거 (ex.address) 를 추가하면
+바로 다음에 오는 게 아니기 때문에 효과 반영이 안됨.
+
+-> 만약 둘이 형제인데 바로 뒤에 오지 않을 때는? ' ~ ' 사용
+
+
+~밑(자식) '  '
+~바로밑(자식) '>'
+~바로뒤(형제) '+'
+~그냥뒤(형제) '~'
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 50px;
+            }
+            span {
+                color: red;
+                background: pink;
+            }
+            p span {
+                color: green;
+            }
+            p ~ span {
+                text-decoration:overline ;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                한 발 다가가면 두 발 멀어지지만 조금 더 가까이 곁에 꼭 붙어서서 
+                안놔줄래 오늘은 내가 먼저 고백할래 <span> 에이핑크 </span>
+            </p>
+            <address>주소임다</address>
+            <span>
+                몰라요
+            </span>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
 -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 50px;
+            }
+            span {
+                color: red;
+                background: pink;
+            }
+            p span {
+                color: green;
+            }
+            p ~ span {
+                text-decoration:overline ;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                한 발 다가가면 두 발 멀어지지만 조금 더 가까이 곁에 꼭 붙어서서 
+                안놔줄래 오늘은 내가 먼저 고백할래 <span> 에이핑크 </span>
+            </p>
+            <address>주소임다</address>
+            <span>
+                몰라요
+            </span>
+        </div>
+    </body>
+</html>
+
+
