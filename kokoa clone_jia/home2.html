@@ -1669,6 +1669,39 @@ p + span {}
 
 
 
+######메모: input / label 태그 언제 꼭 같이 써야 하는지 등
+헷갈리므로 다시 찾아보고 복습+정리하기!
+
+required  <-> optional
+
+attribute selector
+
+
+***중요한 사실!(내 개인적인 것)
+input:required 나
+input[] 이런 것 전부 다
+input 뒤에 띄어쓰기 절대 하지 말고 붙여써야 작동됨~!!!! 주의!
+
+input[placeholder~="name"] 
+->   placeholder에 name 이라는 단어를 '포함'한 모든 input에 적용
+->   ~=""  은 ' ""을 포함하고 있다'는 의미
+
+
+그 외에도 (mdn 참고)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+a elements with an href matching A
+a[href="A"]
+
+a elements with an href containing A
+a[href*="A"]
+
+a elements with an href ending A
+a[href$="A"]
+
+등등 기호를 합쳐서 포함인지, 끝인지 등을 표현할 수 있음
+class 지정 없이 css만으로 해낼 수 있다는 게 장점
+
 -->
 
 
@@ -1681,28 +1714,24 @@ p + span {}
                 height: 100vh;
                 margin: 50px;
             }
-            span {
-                color: red;
-                background: pink;
+            input {
+                border: 2px solid pink;
             }
-            p span {
-                color: green;
+            input:required {
+                border-color: green;
             }
-            p ~ span {
-                text-decoration:overline ;
-            }
+            input[placeholder~="name"] {
+                background-color: yellow;
+            }         
         </style>
     </head>
     <body>
         <div>
-            <p>
-                한 발 다가가면 두 발 멀어지지만 조금 더 가까이 곁에 꼭 붙어서서 
-                안놔줄래 오늘은 내가 먼저 고백할래 <span> 에이핑크 </span>
-            </p>
-            <address>주소임다</address>
-            <span>
-                몰라요
-            </span>
+            <form>
+                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="Last name" />
+                <input type="password" required placeholder="password" />
+            </form>
         </div>
     </body>
 </html>
