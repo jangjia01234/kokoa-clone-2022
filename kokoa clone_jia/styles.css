@@ -63,43 +63,44 @@ body {
     background-color:snow;
     font-family:'Times New Roman', Times, serif;
 }
-.box_first {
+
+.first {
     background: tomato;
     height: 200px;
     width: 100px;
     border: 4px solid white;
 }
-.box_first_inside {
+.inside_first {
     background-color: white;
 }
 
-.box_second {
+.second {
     background: teal;
     height: 200px;
     width: 100px;
     border: 4px solid white;
 }
-.box_second_inside {
+.inside_second {
     background-color: white;
 }
 
-.box_third {
+.third {
     background: burlywood;
     height: 200px;
     width: 100px;
     border: 4px solid white;
 }
-.box_third_inside {
+.inside_third {
     background-color: white;
 }
 
-.box_fourth {
+.fourth {
     background: thistle;
     height: 200px;
     width: 100px;
     border: 4px solid white;
 }
-.box_fourth_inside {
+.inside_fourth {
     background-color: white;
 }
 
