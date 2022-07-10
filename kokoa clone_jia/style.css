@@ -1,0 +1,444 @@
+/*
+css 는 cascading style sheet 이기 때문에
+가장 마지막(맨 밑)에 작성된 내용을 받아들인다
+여러 개 겹치는 내용 중에 맨~마지막에 적은 게
+color yellow라면 노란색으로 적용됨.
+
+---> 
+가장 마지막(맨 밑)에 작성된 내용을 받아들인다. 따라서,
+***코드의 순서가 결과에 영향을 미친다!! 이게 중요!
+
+우선은 inline 으로 css 적는 것부터 할 거기 때문에
+일단 여기는 나중에 쓸거.
+
+
+body {
+    background-color:rgb(34, 34, 36);
+}
+
+
+
+7/8 코챌 니꼬쌤 솔루션
+css 파일
+
+
+
+body {
+    background:tomato;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  
+  .father{
+    width:200px;
+    height:200px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background:wheat;
+    border:2px solid black;
+  }
+  
+  .inside {
+    background:teal;
+    height:50px;
+    width:50px;
+    border:3px solid white;
+  }
+  
+  .inside-second {
+    width: 100%;
+    border-style:dashed;
+  }
+
+
+
+
+input[class~="box_"] {
+    border: 4px solid white;
+    height: 200px;
+    width: 100px;
+}
+input[div~="inside_"] {
+    background-color: white;
+}
+
+
+
+지난번 챌린지와 마찬가지로, 
+css 파일을 생성하고 그 안에 css 코드를 작성해주세요.
+
+4개 박스의 색상 부분은 Pseudo Selector(의사 선택자)를 
+사용해 구현하세요.
+
+색상이름과 색상코드가 적힌 박스의 위치는 
+Position 속성을 사용해 구현하세요.
+
+
+
+ 
+
+
+body {
+    background-color:snow;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+}
+
+div>.father {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    float: left;
+    margin: 10px 10px;
+}
+
+.father :nth-child(1) {
+    background-color: tomato;
+    width: 100px;
+}
+.father :nth-child(2) {
+    background-color: teal;
+    width: 100px;
+}
+.father :nth-child(3) {
+    background-color: burlywood;
+    width: 100px;
+}
+.father :nth-child(4) {
+    background-color: thistle;
+    width: 100px;
+}
+
+
+
+ 
+
+ body {
+    background-color:snow;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+}
+.father {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 300px 300px;
+}
+.box {
+    float: left;
+    margin: 10px 10px;
+}
+
+.father :nth-child(1) {
+    background-color: tomato;
+    position: relative;
+    top: 0px; left: 0px;
+    border: 10px solid white;
+}
+.father :nth-child(2) {
+    background-color: teal;
+    position: relative;
+    top: 0px; left: 0px;
+    border: 10px solid white;
+}
+.father :nth-child(3) {
+    background-color: burlywood;
+    position: relative;
+    top: 0px; left: 0px;
+    border: 10px solid white;
+}
+.father :nth-child(4) {
+    background-color: thistle;
+    position: relative;
+    top: 0px; left: 0px;
+    border: 10px solid white;
+}
+
+.father2 {
+    margin: 20px;
+}
+
+.father2 :nth-child(1) {
+    background-color: white;
+}
+.father2 :nth-child(2) {
+    background-color: white;
+}
+.father2 :nth-child(3) {
+    background-color: white;
+}
+.father2 :nth-child(4) {
+    background-color: white;
+}
+
+
+    <body>
+        <article>
+            <section class="anime">
+                <div class="circle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+            <section class="anime">
+                <div class="square">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>
+
+
+
+
+
+
+
+border:2px solid white;
+*/
+
+body {
+    background-color: black;
+    padding: 20px 180px;
+    margin: 0;
+}
+
+article {
+    background-color: #7EBABD;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #7EBABD;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 2000px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+@keyframes 동그라미 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.circle {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    height: 30vh;
+    align-items: center;
+    animation: 동그라미 1s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.circle :nth-child(1) {
+    position: relative;
+    left: -20px;
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.circle :nth-child(2) {
+    position: relative;
+    left: 0;
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.circle :nth-child(3) {
+    position: relative;
+    left: 20px;
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+@keyframes 네모1 {
+    0% {
+        transform:scale(1,2);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes 네모2 {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1,2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes 네모3 {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1,2);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes 네모4 {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1,2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes 네모5 {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1,2);
+    }
+}
+
+
+
+.square {
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    align-items: center;
+}
+
+
+
+
+.square :nth-child(1) {
+    position: relative;
+    left: -10px;
+    background-color: white;
+    height: 50px;
+    width: 10px;
+    animation: 네모1 0.8s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.square :nth-child(2) {
+    position: relative;
+    left: -5;
+    background-color: white;
+    height: 50px;
+    width: 10px;
+    animation: 네모2 0.8s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.square :nth-child(3) {
+    position: relative;
+    left: 0px;
+    background-color: white;
+    height: 50px;
+    width: 10px;
+    animation: 네모3 0.8s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.square :nth-child(4) {
+    position: relative;
+    left: 5px;
+    background-color: white;
+    height: 50px;
+    width: 10px;
+    animation: 네모4 0.8s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.square :nth-child(5) {
+    position: relative;
+    left: 10px;
+    background-color: white;
+    height: 50px;
+    width: 10px;
+    animation: 네모5 0.8s cubic-bezier(.17,.67,.83,.67) infinite;
+}
