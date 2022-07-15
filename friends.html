@@ -1,0 +1,91 @@
+ <!-- 
+    
+#6.10
+navigation bar 만들기 (bottom)
+
+    - navigation 안의 ul 안에 많은 li들로 구성되는데, 
+      구글도 navigation을 찾아서 ul의 li 안에 있는 link를 
+      가져오게끔 설정되어 있다.
+
+    - 단축키 ->  nav>il>li*(갯수)>a
+      그 후 #과 tab만으로 간편하게 작성이 가능하다.
+      (수정하다 보면 다음 tab이 옳게 먹히지 않는다.)
+
+    <nav>
+        <ul>
+            <li>
+                <a href=""></a>
+            </li>
+        </ul>
+    </nav>
+
+
+    - 점 3개(icon)는 ellipsis 라고 한다.
+
+    - 속성과 class 이름이 똑같아도 상관없다.
+        ex. <nav class="nav">
+
+    - 메인 styles.css에 다른 요소의 css를 import 할 때, 
+        순서를 지키는 것이 정말 중요하다.
+
+        1. font import
+        2. 모든 style reset
+        3. variables.css import
+        -> 이 세 가지가 순서가 조금이라도 바뀌면 적용 안됨!
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0">
+    <title>Friends - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>98%</span>
+            <i class="fa-solid fa-battery-full"></i>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+    
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__btn">
+                    <a class="nav__link" href="friends.html"><i class="fa-solid fa-user fa-lg" ></i></a>
+                </li>
+                <li class="nav__btn">
+                    <a class="nav__link" href="#"><i class="fa-regular fa-comment fa-lg"></i></a>
+                </li>
+                <li class="nav__btn">
+                    <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+                </li>
+                <li class="nav__btn">
+                    <a class="nav__link" href="#"><i class="fa-solid fa-ellipsis fa-lg"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+
+    <script 
+        src="https://kit.fontawesome.com/3b88ea5e82.js" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

@@ -32,6 +32,62 @@ input:focus {
  /* inherit = 부모로부터 색을 상속받는 것 */
 
 
+/* 
+
+#login-form input {
+    padding: 15px 0px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}    
+
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+    border-color: var(--red);
+}
+
+#login-form input[type="submit"] {
+    background-color:var(--red) ;
+    cursor: pointer;  
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    
+    font-size: 13px;
+}
+*/
+
+[form의 특성]
+    
+    ex) <form action="" method="" class=""></form>
+
+    action: 어떤 페이지로 data를 보낼지 결정 가능  
+            ex.action="friends.html"  -> 프렌즈 파일로 이동
+    method: 두 가지 방식이 있다.
+        1) POST:백엔드 서버에 정보를 전송하는 방식
+                (지금 프로젝트에서는 서버를 갖고 있지 않아서 사용 불가)
+        2) GET: 보안에 취약함. 따라서 username이나 password는 보내면 안됨.
+                url에 포함돼도 상관없는 정보들을 GET 방식으로 보냄.
+            ex. method="get"
+    
+    *유튜브 클론코딩에서 get과 post에 대해 더 알게 될 예정
+    (form을 많이 씀)
+
+
+
  -->
 
 
@@ -62,8 +118,8 @@ input:focus {
             <i class="fa-solid fa-battery-full"></i>
             <i class="fa-solid fa-bolt"></i>
         </div>
-
     </div>
+    
         <header class="welcome-header">
             <h1 class="welcome-header__title">
                 Welcome to Kokoa Clone
@@ -73,11 +129,11 @@ input:focus {
             </p>
         </header>
 
-        <form class="login-form">
-            <input required type="text" placeholder="Email or phone number"/> 
-            <input required type="password" placeholder="Password"/>
-            <input type="submit" value="Log In" />
-            <a href="#">Find Kokoa Account or Password</a>     
+        <form action="css/friends.html" method="get" class="login-form">
+            <input class="login-form__input" required name="username" type="text" placeholder="Email or phone number"/> 
+            <input class="login-form__input" required name="password" type="password" placeholder="Password"/>
+            <input class="login-form__input login-form__btn" type="submit" value="Log In" />
+            <a class="login-form__a" href="#">Find Kokoa Account or Password</a>     
         </form>
 
     <script 
