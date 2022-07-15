@@ -34,6 +34,42 @@ navigation bar 만들기 (bottom)
         -> 이 세 가지가 순서가 조금이라도 바뀌면 적용 안됨!
 
 
+#6.11
+navigation bar 하단에 고정하기
+
+    position: fixed
+    bottom: 0
+    width:100% (배열이 깨지는 경우)
+    box-sizing: border-box (아이콘들이 한 줄로 보이게 함)
+      -> css에 '내가 paddiing을 줘도 box 사이즈를 늘리지 마'라고 하는 것
+
+아이콘 색상 검은색으로 통일하기
+    1. css 파일에 아래 추가하거나
+        .nav__link {
+        color: inherit;
+        }
+
+    2. reset.css에 아래 추가하기 (이걸 더 추천!)
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+#6.13 
+nav-bar 메세지 숫자 아이콘 만들기
+
+**  nav__noti는 span이라서 height, width 적용x
+    display:block 설정을 해줘야 블록이 된다.
+
+**  대상을 겹치게 하고 싶다면
+    원하는 요소에 position: absolute 사용
+        (BUT!!) 
+        absolute는 가장 가까운 relative를 가진 부모 기준으로 움직임
+        nav-bar에서는 따로 지정을 안할 경우 body 기준으로 움직이기 때문에
+        nav__link에 position:relative를 지정해줘야 원하는대로 움직임
+
+**  icon은 text(font) 라고 생각하면 됨!
+
 -->
 
 
@@ -64,20 +100,45 @@ navigation bar 만들기 (bottom)
         </div>
     </div>
     
+    <header class="screen-header">
+        <h1 class="screen-header__title">Friends</h1>
+        <div class="screen-header__icons">
+            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span> <i class="fa-solid fa-gear fa-lg"></i></span>
+        </div>
+    </header>
 
+    <a id="friends-display-link">
+        <i class="fa-solid fa-circle-info"></i>
+        Friends' Names Display
+        <i class="fa-solid fa-angle-right fa-sm"></i>
+    </a>
+
+<!-- navigation bar -->
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__btn">
-                    <a class="nav__link" href="friends.html"><i class="fa-solid fa-user fa-lg" ></i></a>
+                    <a class="nav__link" href="friends.html">
+                        <i class="fa-solid fa-user fa-lg" ></i>
+                    </a>
                 </li>
                 <li class="nav__btn">
-                    <a class="nav__link" href="#"><i class="fa-regular fa-comment fa-lg"></i></a>
+                    <a class="nav__link" href="#">
+                        <span class="nav__noti">1</span>
+                        <i class="fa-regular fa-comment fa-lg"></i>
+                    </a>
                 </li>
                 <li class="nav__btn">
-                    <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+                    <a class="nav__link" href="#">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                    </a>
                 </li>
                 <li class="nav__btn">
-                    <a class="nav__link" href="#"><i class="fa-solid fa-ellipsis fa-lg"></i></a>
+                    <div class="nav__alert"></div>
+                    <a class="nav__link" href="#">
+                        <i class="fa-solid fa-ellipsis fa-lg"></i>
+                    </a>
                 </li>
             </ul>
         </nav>

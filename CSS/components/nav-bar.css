@@ -1,0 +1,56 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    padding: 20px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    /* 니코쌤은 space-between 으로 하심 */
+}
+
+.nav__link {
+    position: relative;
+    color: #2e363e;
+}
+
+.nav__noti {
+    background-color: tomato;
+    position: ;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+        /* nav__noti는 span이라서 height, width 적용x
+    display:block 설정을 해줘야 블록이 된다. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+        /* noti 를 말풍선 아이콘 위에 얹기 */
+    position: absolute;
+    left: 13px;
+    bottom: 9px;
+}
+
+.nav__btn {
+    position: relative;
+}
+
+.nav__alert {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: tomato;
+    left: 20px;
+    bottom: 14px;
+}
+
