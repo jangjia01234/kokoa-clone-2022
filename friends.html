@@ -84,6 +84,7 @@ nav-bar 메세지 숫자 아이콘 만들기
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- status bar -->
 <body>
     <div class="status-bar">
         <div class="status-bar__column">
@@ -99,7 +100,8 @@ nav-bar 메세지 숫자 아이콘 만들기
             <i class="fa-solid fa-bolt"></i>
         </div>
     </div>
-    
+
+<!-- screen header -->
     <header class="screen-header">
         <h1 class="screen-header__title">Friends</h1>
         <div class="screen-header__icons">
@@ -109,11 +111,24 @@ nav-bar 메세지 숫자 아이콘 만들기
         </div>
     </header>
 
+<!-- friends' names display -->
     <a id="friends-display-link">
         <i class="fa-solid fa-circle-info"></i>
         Friends' Names Display
         <i class="fa-solid fa-angle-right fa-sm"></i>
     </a>
+
+<!-- user component (photo, name, subtitle) -->
+
+    <div class="user-component">
+        <div class="user-component__column">
+            <img src="https://avatars.githubusercontent.com/u/3612017" class="user-component__avatar" />
+            <div class="user-component__text">
+                <h4 class="user-component__title">Nicolas</h4>
+            </div>
+        </div>
+        <div class="user-component__column"></div>
+    </div>  
 
 <!-- navigation bar -->
         <nav class="nav">
@@ -143,7 +158,7 @@ nav-bar 메세지 숫자 아이콘 만들기
             </ul>
         </nav>
 
-
+<!-- script (icon fontawesome) -->
     <script 
         src="https://kit.fontawesome.com/3b88ea5e82.js" 
         crossorigin="anonymous">
