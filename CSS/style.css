@@ -6,6 +6,8 @@ body {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
+/* 헤더 */
+
 .welcome-header {
     margin: 90px 0px;
     text-align: center;
@@ -25,7 +27,7 @@ body {
     opacity: 0.7;
 }
 
-
+/* 로그인 */
 
 .login-form {
     display: flex;
@@ -33,13 +35,50 @@ body {
     margin: 0px 30px;
 }
 
+.login-form__input {
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.login-form__input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.login-form__input:focus {
+    border-color: var(--red);
+}
+
+.login-form__btn {
+    background-color:var(--red) ;
+    cursor: pointer;  
+    padding: 20px 0px;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.login-form__a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+}
+
+/* 
+
 .login-form input {
     padding: 15px 0px;
     border: none;
     font-size: 18px;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 25px;
 }
+
+.login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}    
 
 .login-form input::placeholder {
     color: rgba(0, 0, 0, 0.4);
@@ -47,5 +86,20 @@ body {
 
 .login-form input:focus {
     border-color: var(--red);
-    transition: border-color 0.3s ease-in-out;
 }
+
+.login-form input[type="submit"] {
+    background-color:var(--red) ;
+    cursor: pointer;  
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+.login-form a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    
+    font-size: 13px;
+}
+*/

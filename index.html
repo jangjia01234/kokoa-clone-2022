@@ -28,6 +28,10 @@ input:focus {
 - cursor: pointer;로 버튼 위의 커서를 변경할 수 있다.
 - color:inherit;는 부모로부터 색을 상속받는 것이다.
 
+ /* cascading 순서 주의하기! */
+ /* inherit = 부모로부터 색을 상속받는 것 */
+
+
  -->
 
 
@@ -58,6 +62,7 @@ input:focus {
             <i class="fa-solid fa-battery-full"></i>
             <i class="fa-solid fa-bolt"></i>
         </div>
+
     </div>
         <header class="welcome-header">
             <h1 class="welcome-header__title">
@@ -72,8 +77,7 @@ input:focus {
             <input required type="text" placeholder="Email or phone number"/> 
             <input required type="password" placeholder="Password"/>
             <input type="submit" value="Log In" />
-            <a href="#">Find Kokoa Account or Password</a>
-            <!-- 같은 페이지에 그대로 머물게 하기=#표시 -->           
+            <a href="#">Find Kokoa Account or Password</a>     
         </form>
 
     <script 
