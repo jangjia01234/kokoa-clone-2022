@@ -1,0 +1,18 @@
+.alt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 10px 0 10px;
+}
+
+.alt-header__column i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alt-header__column span {
+    font-size: 20px;
+    font-weight: 800;
+}
+
