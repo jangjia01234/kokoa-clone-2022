@@ -2,7 +2,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgb(243, 243, 243);
+    margin: 0;
+    background-color: rgb(33, 33, 33);
     padding: 20px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -11,6 +12,8 @@
 .nav__list {
     display: flex;
     justify-content: space-around;
+    color: white;
+    
     /* 니코쌤은 space-between 으로 하심 */
 }
 
@@ -20,7 +23,7 @@
 }
 
 .nav__noti {
-    background-color: tomato;
+    background-color: rgb(64, 72, 220);
     position: ;
     display: block;
     width: 18px;
@@ -42,6 +45,7 @@
 
 .nav__btn {
     position: relative;
+    color: white;
 }
 
 .nav__alert {
@@ -49,7 +53,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: rgb(64, 72, 220);
     left: 20px;
     bottom: 14px;
 }

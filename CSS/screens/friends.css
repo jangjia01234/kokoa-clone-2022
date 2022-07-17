@@ -1,3 +1,7 @@
+.friends {
+    margin: 0;
+}
+
 #friends-display-link {
     text-align: center;
     display: block;
@@ -7,7 +11,7 @@
 }
 
 #friends-display-link i {
-    color: rgb(207, 207, 207);
+    color: rgba(18, 18, 18, 0.8);
     margin-right: 5px;
 }
 

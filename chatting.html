@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, 
         initial-scale=1.0">
-    <title>Friends - Kokoa Clone</title>
+    <title>Chatting</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <!-- status bar -->
-<body>
+<body class="chatting">
     <div class="status-bar">
         <div class="status-bar__column">
             <span>No Service</span>
@@ -26,46 +26,64 @@
         </div>
     </div>
 
+<!-- alt header -->
 <header class="alt-header">
     <div class="alt-header__column">
         <i class="fa-solid fa-angle-left fa-lg"></i>
     </div>
     <div class="alt-header__column">
-        <span>Nicolas</span>
+        <span class="bars">Nicolas</span>
     </div>
     <div class="alt-header__column">
-        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-        <i class="fa-solid fa-bars fa-lg"></i>
+        <div class="alt-header__column-search">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            <i class="fa-solid fa-bars fa-lg"></i>
     </div>
 </header>
 
-<!-- navigation bar -->
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__btn">
-                    <a class="nav__link" href="friends.html">
-                        <i class="fa-solid fa-user fa-lg" ></i>
-                    </a>
-                </li>
-                <li class="nav__btn">
-                    <a class="nav__link" href="#">
-                        <span class="nav__noti">1</span>
-                        <i class="fa-regular fa-comment fa-lg"></i>
-                    </a>
-                </li>
-                <li class="nav__btn">
-                    <a class="nav__link" href="#">
-                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                    </a>
-                </li>
-                <li class="nav__btn">
-                    <div class="nav__alert"></div>
-                    <a class="nav__link" href="#">
-                        <i class="fa-solid fa-ellipsis fa-lg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+<!-- chat screen -->
+<main class="chat-screen">
+    <div class="chat-timestamp">
+        Tuesday, May 19, 2022
+    </div>
+        <div class="message-row1">
+            <img src="https://i.pinimg.com/564x/1c/0e/95/1c0e95a7091089550846fd7ebd3f8c7c.jpg">
+            <div class="message-row__context1">
+                <span class="message__name1">Nicolas</span>
+                <div class="message__sent1">
+                    <span class="message__bubble1">Boo-ya!</span>
+                    <span class="message__time1">3:50</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row2">
+            <div class="message__sent2">
+                <span class="message__time2">3:57</span>
+                <span class="message__bubble_me2">What's the matter?</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- reply -->
+<main>
+    <form class="reply">
+        <div class="reply__column">
+            <i class="fa-solid fa-square-plus fa-lg"></i>
+        </div>
+        <div class="reply__column">
+            <input type="text" placeholder="Write a message..." />
+            <i class="fa-solid fa-face-smile fa-lg"></i>
+            <button>
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </form>
+</main>
+
+
+
+
 
 <!-- script (icon fontawesome) -->
     <script 

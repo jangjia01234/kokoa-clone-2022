@@ -12,7 +12,7 @@
 }
 
 .user-component__text-info i {
-    color: tomato;
+    color: rgb(64, 72, 220);
     margin-left: 5px;
     margin-bottom: 20px;
 }
@@ -62,7 +62,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: rgb(64, 72, 220);
     position: absolute;
     top: 195px;
     left: 170px;
