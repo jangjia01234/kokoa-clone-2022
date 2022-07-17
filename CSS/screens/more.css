@@ -1,0 +1,149 @@
+
+.screen-header__icons-right {
+    display: flex;
+    position: relative;
+}
+
+.screen-header__icons-right div {
+    width: 5px;
+    height: 5px;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    position: absolute;
+}
+
+.user-component {
+    border-bottom: none;
+}
+
+.middle-icon-menu {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding-bottom: 15px;
+}
+
+.middle-icon-menu__line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.middle-icon-menu__set-a span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+.middle-icon-menu__set-b span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-b i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+.middle-icon-menu__set-c span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-c i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+.middle-icon-menu__set-d span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-d i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+
+
+.middle-icon-menu__set-1 span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-1 i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+
+.middle-icon-menu__set-2 {
+    margin-left: 55px;
+}
+
+.middle-icon-menu__set-2 span {
+    font-size: 12px;
+    display: flex;
+}
+
+.middle-icon-menu__set-2 i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2e363e;
+    font-size: 25px;
+}
+
+
+
+.suggestions-menu__title {
+    margin: 20px 10px 20px 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.suggestions-menu__all {
+    display: flex;
+}
+
+.suggestions-menu__set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+
+.suggestions-menu__set img {
+    width: 40px;
+    height: 40px;
+}
+
+.suggestions-menu__set span {
+    font-size: 12px;
+}

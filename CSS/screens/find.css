@@ -1,0 +1,135 @@
+/* upside-menu */
+
+body {
+    margin: 0 10px;
+}
+
+.upside-menu {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.upside-menu__set {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.upside-menu__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.upside-menu__text {
+    font-size: 12px;
+    font-weight: 600;
+    max-width: 60px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Recommended Friends */
+
+.recomm-friends {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-size: 14px;
+}
+
+.recomm-friends span:first-child {
+    margin: 10px;
+} 
+
+.recomm-friends span:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 40px;
+}
+
+
+/* Open Chat */
+
+.openchat {
+    margin: 0 10px 0 10px;
+}
+
+.openchat-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.openchat-title__right span {
+    margin-right: 3px;
+}
+
+.openchat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.openchat-content__set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.openchat-content__text {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+}
+
+.openchat-content__text-title {
+    font-weight: 600;
+    color: black;
+}
+
+.openchat-content__text-subtitle {
+    margin: 5px 0 10px 0;
+}
+
+.openchat-content__text-info {
+    display: flex;
+    font-size: 12px;
+}
+
+.openchat-content__text-info img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.openchat-content__text-info-red {
+    color: tomato;
+}
+
+.openchat-content__image {
+    position: relative;
+}
+
+.openchat-content__image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
+}
+
+.openchat-content__image div:nth-child(2) {
+    position: absolute;
+    background-color: black;
+    opacity: 40%;
+    color: white;
+    padding: 4px 5px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-top: -25px;
+    margin-right: -40px;
+}

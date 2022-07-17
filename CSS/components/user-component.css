@@ -109,7 +109,9 @@ border-bottom: 1px solid rgb(230, 230, 230);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
+
 
 .user-component__column img {
     width: 60px;
@@ -135,4 +137,17 @@ border-bottom: 1px solid rgb(230, 230, 230);
     align-items: center;
     margin: 8px 8px;
     font-size: 10px;
+}
+
+.user-component__column:nth-child(2) i {
+    color: #2e363e;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.middle-icon-menu__line:nth-child(2) {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 28px;
 }
