@@ -38,11 +38,11 @@
 }
 
 .login-form__input:focus {
-    border-color:var(--salmon);
+    border-color:rgb(64, 72, 220);
 }
 
 .login-form__btn {
-    background-color:var(--salmon) ;
+    background-color:rgb(64, 72, 220) ;
     cursor: pointer;  
     padding: 20px 0px;
     border-radius: 5px;

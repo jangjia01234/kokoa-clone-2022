@@ -1,5 +1,9 @@
+.settings {
+    margin:0;
+}
+
 .alt-header__column:nth-child(3) i {
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 .settings-list {
@@ -49,7 +53,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: rgb(64, 72, 220);
     color: white;
     font-size: 8px;
     font-weight: 600;
